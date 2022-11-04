@@ -19,10 +19,25 @@ namespace MikesGuacApp.Controllers
         {
             _context = context;
         }
-
+        
+        // 
         public IActionResult ShowRewardsForm()
         {
             return View();
+        }
+
+        //
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ShowRewardsForm([Bind("Id,Name,Address,Email")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(customer);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(customer);
         }
 
         // GET: Customers
@@ -31,7 +46,7 @@ namespace MikesGuacApp.Controllers
             return View(await _context.Customer.ToListAsync());
         }
 
-        //
+        
 
         // GET: Customers/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -61,7 +76,7 @@ namespace MikesGuacApp.Controllers
         // POST: Customers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
+   
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Address,Email,Review")] Customer customer)

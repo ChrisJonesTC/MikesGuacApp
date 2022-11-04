@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-MikesGuacApp-C4BBB24B-8F0B-4B05-B8F9-EC01A60A4CE8</UserSecretsId>
+    <StartupObject>MikesGuacApp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

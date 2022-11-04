@@ -45,10 +45,11 @@ html {
 }
 
 .border-top {
-  border-top: 5px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 5px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
@@ -81,55 +82,54 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-
-.create {
-    background-image: url('/lib/img/white logo.jpg');
-}
-
-.privacy{
-    color:var(--clr-light);
-    background-image: url(/lib/img/warp.jpg);
-    height:100%;
-}
-
 .home {
     background-color: white;
 }
 
-.main-logo{
-   height:600px;
-   width:500px;
+
+/**Intro Page
+------------------------------------------------------*/
+.intro{
+    background-color:black;
 }
 
-.about-me h1,
+.main-logo {
+    height: 90%;
+    width: 90%;
+}
+
 .about-me h2 {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    padding: 25px;
-  
+    padding-bottom: 50px;
+    padding-right: 10px;
+    padding-left: 20px;
 }
 
-.why-logo{
-    float:left;
-    margin-right:5px;
-    height:600px;
-    width:550px;
-    padding: 25px;
+.why-logo {
+    float: left;
+    height: 500px;
+    width: 500px;
 }
 
+/* Flip Card
+--------------------------------------------*/
 /*Flip Card Background*/
 .products {
     background-image: url('/lib/img/guac ingredients.jpg');
-    background-repeat: no-repeat; 
-  
-    line-height: 20px;
-    padding: 5px;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+    padding-top:50px;
+    padding-left: 25px;
 }
-/* The flip card container - set the width and height to whatever you want. 
-We have added the border property to demonstrate that the flip itself goes out of the box on hover 
-(remove perspective if you don't want the 3D effect) */
+
 .flip-card {
-    background-color: transparent;
+    margin: 5%;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: transparent;    
     width: 375px;
     height: 450px;
     border: 20px solid var(--clr-dark);
@@ -186,18 +186,87 @@ We have added the border property to demonstrate that the flip itself goes out o
         line-height: 1.5;
     }
 
-/* CONNECT WITH ME */
-.social-list{
-    display:flex;
-    justify-content:space-between;
-    padding:5px;
+
+/*Locations Section
+
+.locations dl,
+.locations h1 {
+    color: var(--clr-light);
+    padding-left: 30px;
+    padding-top: 50px; 
+}
+
+.locations {
+    background-color: white;
+    color: black;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+*/
+
+/* CONNECT WITH ME Section 
+---------------------------------------------------*/
+.social {
+    background-color: black;
+    color: var(--clr-light);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 30px;
 }
 
 .social-list-item {
-    
+    width: 55px;
 }
 
 .social-list fa- {
-    height: 200px;
-    width: 200px;
+   
+    color: var(--clr-light);
+}
+
+/* Community Section 
+---------------------------------------------------*/
+.comm-img {
+    display: inline-block;
+    height: 525px;
+    width: 750px;
+    opacity: 0.5;
+}
+
+
+/* Create Review Section 
+---------------------------------------------------*/
+.create {
+    background-image: url('/lib/img/white logo.jpg');
+    background-color: white;
+}
+
+
+/* Rewards Form Section 
+---------------------------------------------------*/
+.col-md-4,
+.rewards-form {
+    padding-left: 25px;
+}
+
+.rewards-img {
+    max-width: 100%;
+}
+
+
+/* Privacy Section 
+---------------------------------------------------*/
+.privacy {
+    color: var(--clr-light);
+    background-image: url(/lib/img/warp.jpg);
+    height: 100%;
+    padding-right: 25px;
 }

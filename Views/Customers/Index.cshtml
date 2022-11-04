@@ -5,19 +5,17 @@
 }
  <div class="community">
     <div class="comm-img">
-        <img src="~/lib/img/welcome.jpg" />
+        <img src="~/lib/img/welcome.jpg"/>
     </div>
-    <div>
-
+    <div class="comm-review">
+        <h1> What's your favorite?</h1>
+        <p>
+            <a asp-action="Create">Create Review</a>
+        </p>
+    </div>   
  </div>
-<h2> What's your favorite?</h2>
 
-<p>
-    <a asp-action="Create">Create Review</a>
-</p>
- </div>   
 <h1>Customer Reviews</h1>
-
 <table class="table">
     <thead>
         <tr>
@@ -45,6 +43,8 @@
             </td>
         </tr>
 }
+
+
     </tbody>
 </table>
 
